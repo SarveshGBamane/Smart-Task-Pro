@@ -7,25 +7,25 @@ A full-stack Task Management Application built using Angular and Spring Boot tha
 
 ### Home
 
-![Dashboard](screenshots/home.png)
+![Dashboard](Screenshots/home.png)
 
 ---
 
 ### Dashboard
 
-![Tasks](screenshots/dashboard.png)
+![Tasks](Screenshots/dashboard.png)
 
 ---
 
 ### Add Task
 
-![Add Task](screenshots/addTask.png)
+![Add Task](Screenshots/addTask.png)
 
 ---
 
 ### Tasks
 
-![Login](screenshots/tasks.png)
+![Tasks](Screenshots/tasks.png)
 ##  Features
 
 - Create, update, and delete tasks
