@@ -111,7 +111,7 @@ Run Spring Boot application.
 Backend runs on:
 
 ```bash
-http://localhost:8080
+http://localhost:9092
 ```
 
 ---
