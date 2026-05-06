@@ -1,0 +1,65 @@
+<nav class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-gray-100 shadow-sm">
+
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+
+        
+        <h1 class="text-lg md:text-xl font-semibold text-indigo-700  font-Allura">
+            SmartTask Pro
+        </h1>
+
+        
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+
+            <a routerLink="/home" routerLinkActive="text-blue-600" class="text-gray-600 hover:text-blue-600 transition">
+                Home
+            </a>
+
+            <a routerLink="/add-task" routerLinkActive="text-purple-600"
+                class="text-gray-600 hover:text-purple-600 transition">
+                Add Task
+            </a>
+            <a routerLink="/dashboard" routerLinkActive="text-blue-600"
+                class="text-gray-600 hover:text-blue-600 transition">
+                Dashboard
+            </a>
+
+            <a routerLink="/tasks" routerLinkActive="text-green-600"
+                class="text-gray-600 hover:text-green-600 transition">
+                Tasks
+            </a>
+
+
+
+        </div>
+
+        
+        <button (click)="toggleMenu()" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition">
+            ☰
+        </button>
+
+    </div>
+
+    
+    <div *ngIf="isMenuOpen" class="md:hidden px-6 pb-4 space-y-3 text-sm font-medium">
+
+        <a routerLink="/home" (click)="toggleMenu()" class="block text-gray-700 hover:text-blue-600 transition">
+            Home
+        </a>
+
+        <a routerLink="/add-task" (click)="toggleMenu()" class="block text-gray-700 hover:text-purple-600 transition">
+            Add Task
+        </a>
+
+        <a routerLink="/dashboard" (click)="toggleMenu()" class="block text-gray-700 hover:text-blue-600 transition">
+            Dashboard
+        </a>
+
+        <a routerLink="/tasks" (click)="toggleMenu()" class="block text-gray-700 hover:text-green-600 transition">
+            Tasks
+        </a>
+
+
+
+    </div>
+
+</nav>

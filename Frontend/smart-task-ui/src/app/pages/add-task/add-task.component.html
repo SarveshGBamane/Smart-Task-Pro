@@ -1,0 +1,133 @@
+<div class="max-w-2xl mx-auto mt-3">
+
+  
+  <div class="bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm rounded-2xl p-8">
+
+  
+    <div class="mb-6">
+      <h2 class="text-2xl font-semibold text-blue-800">
+        Add New Task
+      </h2>
+      
+    </div>
+
+    <form (ngSubmit)="addTask()" class="space-y-6">
+
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">
+          Title
+        </label>
+        <input
+          type="text"
+          [(ngModel)]="task.title"
+          name="title"
+          required
+          class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-white 
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                 transition placeholder:text-gray-400"
+          placeholder="Enter task title"
+        />
+      </div>
+
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">
+          Description
+        </label>
+        <textarea
+          [(ngModel)]="task.description"
+          name="description"
+          rows="3"
+          class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-white 
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                 transition placeholder:text-gray-400"
+          placeholder="Add more details about the task"
+        ></textarea>
+      </div>
+
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Priority
+          </label>
+          <select
+            [(ngModel)]="task.priority"
+            name="priority"
+            class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-white 
+                   focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          >
+            <option value="HIGH">High</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="LOW">Low</option>
+          </select>
+        </div>
+
+       
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">
+            Status
+          </label>
+          <select
+            [(ngModel)]="task.status"
+            name="status"
+            class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-white 
+                   focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          >
+            <option value="PENDING">Pending</option>
+          </select>
+        </div>
+
+      </div>
+
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">
+          Category
+        </label>
+        <input
+          type="text"
+          [(ngModel)]="task.category"
+          name="category"
+          class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-white 
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          placeholder="Study / Work / Personal"
+        />
+      </div>
+
+     
+      <div>
+        <label class="block text-sm font-medium text-gray-600 mb-1">
+          Due Date
+        </label>
+        <input
+          type="date"
+          [(ngModel)]="task.dueDate"
+          name="dueDate"
+          required
+          class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-white 
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+        />
+      </div>
+
+     
+      <div class="pt-2">
+        <button
+          type="submit"
+          class="w-full relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600 
+                 text-white font-medium py-2.5 rounded-lg 
+                 hover:shadow-md active:scale-[0.98] transition">
+
+          Add Task
+
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
